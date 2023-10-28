@@ -14,6 +14,7 @@ function App() {
      <ErrorBoundary>      
      <Router>
         <Routes>
+          {/* router */}
           <Route path="/user/*" element={<User/>} />
           <Route path="*" element={<WebPage/>}></Route>
           <Route path="register" element={<Registration/>}/>
