@@ -13,9 +13,8 @@ import {
   CDropdownDivider,
   // CImage,
 } from '@coreui/react'
-import { from } from '@coreui/icons-react'
+import CIcon from '@coreui/icons-react'
 import {cilBook, cilMenu } from '@coreui/icons'
-
 import { AppHeaderDropdown } from './index'
 import LanguageSelector from '../header/LanguageSelector'
 
