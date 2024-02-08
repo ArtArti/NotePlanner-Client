@@ -25,18 +25,25 @@ const _nav = [
         component: CNavItem,
         name: 'TODO',
         to: 'base/TodoIndex',
-      }]
+      },
+      // {
+      //   component: CNavItem,
+      //   name: 'Notes',
+      //   to: 'base/notes',
+      // }
+    ]
   },
   {
     component: CNavGroup,
     name: 'Application',
+    to :'baseApp',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'new-Application',
-        to: 'base/NewApplication',
-      },]
+        name: 'Notes',
+        to: 'baseApp/notes',
+      }]
   }
 ]
 

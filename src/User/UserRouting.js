@@ -25,7 +25,6 @@ class User extends Component {
           <Routes>
             {/* <Route exact path="/register" name="Register Page" element={<Register/>} /> */}
             <Route path="*" name="Home" element={<DefaultLayout/>} />
-           
             {/* <Route path="profile" name="ProfileView" element={<Profile/>} /> */}
           </Routes>
         </Suspense>

@@ -3,14 +3,14 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Profile() {
   const [loading, setLoading] = useState(false);
-  //   const [logoutLoading, setLogoutloading] = useState(false);
   const [userData, setUserData] = useState(false);
   const navigate = useNavigate();
-
-  //   const URL = process.env.REACT_APP_URL;
+  const { t } = useTranslation();
+ 
 
   useEffect(() => {
     getUser();
@@ -84,9 +84,8 @@ export default function Profile() {
             <div className=" flex flex-wrap">
               <label
                 htmlFor="password"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Name
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                Name  
               </label>
               <input
                 type="text"
@@ -94,7 +93,7 @@ export default function Profile() {
                 id="name"
                 disabled
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                value={userData.name}
+                value={t('translation.dynamicContent', { name: userData.name })}
               />
             </div>
             <div className=" flex flex-wrap">
@@ -118,7 +117,7 @@ export default function Profile() {
                 htmlFor="password"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Last Update
+               {t('translation.profile')}
               </label>
               <input
                 type="text"

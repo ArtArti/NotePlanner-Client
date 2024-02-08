@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   CDropdown,
   CDropdownDivider,
@@ -6,26 +6,26 @@ import {
   CDropdownItem,
   CDropdownMenu,
   CDropdownToggle,
-} from '@coreui/react'
+} from "@coreui/react";
 import {
   cilLockLocked,
   cilSettings,
   cilUser,
-} from '@coreui/icons'
-import CIcon from '@coreui/icons-react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
-
+} from "@coreui/icons";
+import CIcon from "@coreui/icons-react";
+import { Link } from "react-router-dom";
 
 const AppHeaderDropdown = () => {
+
   return (
     <CDropdown variant="nav-item">
       <CDropdownToggle placement="bottom-end" className="py-0" caret={false}>
-        <FontAwesomeIcon icon={faUser} size='lg'/>
+        <CIcon icon={cilUser} className="me-2" />
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
-        <CDropdownHeader className="bg-light fw-semibold py-2">Account</CDropdownHeader>
+        <CDropdownHeader className="bg-light fw-semibold py-2">
+          Account
+        </CDropdownHeader>
         <CDropdownItem component={Link} to="profile">
           <CIcon icon={cilUser} className="me-2" />
           Profile
@@ -39,9 +39,10 @@ const AppHeaderDropdown = () => {
           <CIcon icon={cilLockLocked} className="me-2" />
           Log Out
         </CDropdownItem>
+        <CDropdownDivider />
       </CDropdownMenu>
     </CDropdown>
-  )
-}
+  );
+};
 
-export default AppHeaderDropdown
+export default AppHeaderDropdown;

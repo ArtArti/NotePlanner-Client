@@ -17,6 +17,7 @@ import CIcon from '@coreui/icons-react'
 import {cilBook, cilMenu } from '@coreui/icons'
 
 import { AppHeaderDropdown } from './index'
+import LanguageSelector from '../header/LanguageSelector'
 
 const AppHeader = () => {
   const dispatch = useDispatch()
@@ -24,7 +25,6 @@ const AppHeader = () => {
 
   return (
     <CHeader position="sticky" className="mb-4 bg-white text-3xl box-decoration-slice">
-    
       <CContainer fluid>
         <CHeaderToggler
           className="ps-1"
@@ -50,6 +50,9 @@ const AppHeader = () => {
               <CIcon icon={cilBook} size="lg" />
             </CNavLink>
           </CNavItem>
+        </CHeaderNav>
+        <CHeaderNav className="ms-3">
+          <LanguageSelector/>
         </CHeaderNav>
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />

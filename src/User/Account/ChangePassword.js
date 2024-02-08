@@ -115,8 +115,7 @@ const navigate = useNavigate();
 
           <button
             className="w-full bg-yellow-600 hover:bg-yellow-700 transition-all ease-in-out duration-300 rounded-sm py-2 font-semibold text-lg cursor-pointer"
-            type="submit"
-          >
+            type="submit">
             Change Password
           </button>
         </form>

@@ -1,7 +1,10 @@
 import { CForm } from '@coreui/react'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function Profile() {
+
+  // const { t }= useTranslation();
   return (
     <>
       {/* <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton> */}

@@ -182,8 +182,7 @@ const Dashboard = () => {
                       <div className="sm:col-span-6">
                         <label
                           htmlFor="password"
-                          className=" block text-sm font-medium leading-6 text-gray-900"
-                        >
+                          className=" block text-sm font-medium leading-6 text-gray-900">
                           Description
                           <span className=" inline-flex mx-4 text-lg">
                             <FunctionDropdown
