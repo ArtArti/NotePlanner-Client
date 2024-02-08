@@ -20,7 +20,7 @@ function Registration() {
     try {
       const response = await axios({
         method: "post",
-        url:"http://localhost:8081/api/auth/signup",
+        url:"https://noteplanner-server.vercel.app/api/auth/signup",
         withCredentials: true,
         data: userData
       });
