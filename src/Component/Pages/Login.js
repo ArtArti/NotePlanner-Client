@@ -13,12 +13,15 @@ const Login = () => {
     e.preventDefault(); // event.preventDefault() method to prevent the default behavior of an HTML form submission
     setLoading(true);
     try {
-      const response = await axios({
+    const response = await axios({
         method: "post",
-        url:"https://note-planner-server.vercel.app/api/auth/signin",
+        url: "https://note-planner-server.vercel.app/api/auth/signup",
         withCredentials: true,
+        headers: {
+            "Content-Type": "application/json" // Specify the content type if sending JSON data
+        },
         data: credentials
-      });
+    });
       if (response.data.success) {
         alert("login success")
         navigate("/user");
