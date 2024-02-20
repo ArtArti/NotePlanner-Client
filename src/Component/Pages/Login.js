@@ -15,7 +15,7 @@ const Login = () => {
     try {
       const response = await axios({
         method: "post",
-        url:"https://noteplanner-server.vercel.app/api/auth/signin",
+        url:"https://note-planner-server.vercel.app/api/auth/signin",
         withCredentials: true,
         data: credentials
       });
