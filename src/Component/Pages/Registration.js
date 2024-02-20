@@ -30,7 +30,7 @@ function Registration() {
       // the withCredentials property to 'true'. This tells the browser to include any cookies associated with the current domain in the request.
       if (response.data.success) {
         alert("succesfully Registered")
-        navigate("/register");
+        navigate("/login");
       }
       setLoading(false);
     } catch (error) {
