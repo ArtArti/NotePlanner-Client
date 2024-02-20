@@ -24,7 +24,7 @@ const Login = () => {
     });
       if (response.data.success) {
         alert("login success")
-        navigate("/login");
+        navigate("/user");
       }
       setLoading(false);
     } catch (error) {
