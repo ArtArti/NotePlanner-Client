@@ -17,14 +17,16 @@ function Registration() {
     e.preventDefault(); // event.preventDefault() method to prevent the default behavior of an HTML form submission
 
     setLoading(true);
-    try {
-      const response = await axios({
+   try {
+    const response = await axios({
         method: "post",
-        url:"https://noteplanner-server.vercel.app/api/auth/signup",
+        url: "https://note-planner-server.vercel.app/api/auth/signup",
         withCredentials: true,
+        headers: {
+            "Content-Type": "application/json" // Specify the content type if sending JSON data
+        },
         data: userData
-      });
-
+    });
       // the withCredentials property to 'true'. This tells the browser to include any cookies associated with the current domain in the request.
       if (response.data.success) {
         alert("succesfully Registered")
