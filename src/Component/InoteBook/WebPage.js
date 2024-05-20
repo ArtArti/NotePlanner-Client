@@ -8,6 +8,7 @@ import {
   COffcanvasHeader,
   CCloseButton,
   COffcanvasBody,
+  CButton
 } from "@coreui/react";
 import {
   faFacebookF,
@@ -26,11 +27,7 @@ import { NavLink } from "react-router-dom";
 
 export default function WebPage() {
   const [visible, setVisible] = useState(false);
-  const [showIframe, setShowIframe] = useState(false);
 
-  const handleButtonClick = () => {
-    setShowIframe(true);
-  };
   return (
     <>
       {/* header section */}
@@ -111,6 +108,7 @@ export default function WebPage() {
             </div>
           </div>
         </CNav>
+
         <div className="flex flex-wrap h-full w-full pt-16">
           <div className="text-centre self-center px-4 w-full lg:h-[230px] md:px-2 lg:px-20 md:text-left md:w-6/12 md:flex lg:flex-col md:justify-between">
             <h3 className="text-3xl md:text-4xl text-black font-bold">
@@ -122,20 +120,10 @@ export default function WebPage() {
               accusamus molestias dolores id itaque praesentium minus doloremque
               voluptas consequuntur vel!
             </p>
-            <CButton onClick={handleButtonClick} className=" bg-gray-900 text-white md:p-1 lg:p-3 p-3 m-2 rounded-3xl">
+            <CButton className=" bg-gray-900 text-white md:p-1 lg:p-3 p-3 m-2 rounded-3xl">
               Explore Our Work 
               <FontAwesomeIcon icon={faArrowCircleRight} />
             </CButton>
-
-            {showIframe && (
-        <iframe
-          title="Vue Project"
-          src="http://localhost:5174/"
-          width="100%"
-          height="500px"
-          frameBorder="0"
-        />
-      )}
 
           </div>
           {/* header image */}

@@ -11,13 +11,15 @@ import {
   CNavItem,
   CCardText,
   CDropdownDivider,
-  // CImage,
+  CHeaderBrand,
+  CCardText
 } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+
 import {cilBook, cilMenu } from '@coreui/icons'
 
 import { AppHeaderDropdown } from './index'
 import LanguageSelector from '../header/LanguageSelector'
+import CIcon from '@coreui/icons-react'
 
 const AppHeader = () => {
   const dispatch = useDispatch()
@@ -29,11 +31,10 @@ const AppHeader = () => {
         <CHeaderToggler
           className="ps-1"
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}>
-          <CIcon icon={cilMenu} size="lg" />
+          <CIcon icon={cilMenu} size='lg'/>
         </CHeaderToggler>
         <CHeaderBrand className="mx-auto d-md-none" to="/">
         <CCardText className=' font-bold'>
-        {/* <CImage src='./Images/logo1.png' className="img-fluid" alt='logo'></CImage> */}
         @Notes_Planner
         </CCardText>
         </CHeaderBrand>

@@ -14,7 +14,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await axios({
-        method: "post",
+        method: "POST",
         url:"http://localhost:8081/api/auth/signin",
         withCredentials: true,
         data: credentials

@@ -11,7 +11,7 @@ const ChangePassword = React.lazy(() =>import('./Account/ChangePassword'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: 'dashboard', name: 'Dashboard', element: Dashboard },
+  { path:'dashboard', name: 'Dashboard', element: Dashboard },
   {path:'base/TodoIndex', name:'todoindex', element: TodoIndex},
   {path:'base/notes', name:'savedNotes', element: SavedNotes},
   { path: 'profile', name: 'ProfileView', element: Profile },
