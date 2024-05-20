@@ -14,11 +14,14 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await axios({
-        method: "POST",
+        method: "post",
         url:"http://localhost:8081/api/auth/signin",
         withCredentials: true,
+        headers: {
+            "Content-Type": "application/json" // Specify the content type if sending JSON data
+        },
         data: credentials
-      });
+    });
       if (response.data.success) {
         alert("login success")
         navigate("/user");
