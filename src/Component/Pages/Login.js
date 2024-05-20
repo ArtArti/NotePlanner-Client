@@ -15,7 +15,7 @@ const Login = () => {
     try {
       const response = await axios({
         method: "post",
-        url:"http://localhost:8081/api/auth/signin",
+        url:"https://server-omega-green.vercel.app/api/auth/signin",
         withCredentials: true,
         headers: {
             "Content-Type": "application/json" // Specify the content type if sending JSON data
