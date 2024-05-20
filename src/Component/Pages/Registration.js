@@ -20,7 +20,7 @@ function Registration() {
    try {
     const response = await axios({
         method: "post",
-        url: "https://note-planner-server.vercel.app/api/auth/signup",
+        url: "https://server-omega-green.vercel.app/api/auth/signup",
         withCredentials: true,
         headers: {
             "Content-Type": "application/json" // Specify the content type if sending JSON data
